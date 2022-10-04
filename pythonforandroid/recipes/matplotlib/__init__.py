@@ -13,6 +13,8 @@ class MatplotlibRecipe(CppCompiledComponentsPythonRecipe):
     depends = ['kiwisolver', 'numpy', 'pillow', 'setuptools', 'freetype']
 
     python_depends = ['cycler', 'fonttools', 'packaging', 'pyparsing', 'python-dateutil']
+    
+    need_stl_shared = True
 
     def generate_libraries_pc_files(self, arch):
         """
