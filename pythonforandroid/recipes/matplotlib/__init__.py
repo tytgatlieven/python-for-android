@@ -14,6 +14,8 @@ class MatplotlibRecipe(CppCompiledComponentsPythonRecipe):
 
     python_depends = ['cycler', 'fonttools', 'packaging', 'pyparsing', 'python-dateutil']
 
+    need_stl_shared = True
+
     def generate_libraries_pc_files(self, arch):
         """
         Create *.pc files for libraries that `matplotib` depends on.

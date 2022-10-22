@@ -121,7 +121,7 @@ class Recipe(metaclass=RecipeMeta):
               path: `'.', None or ''`
     """
 
-    need_stl_shared = True
+    need_stl_shared = False
     '''Some libraries or python packages may need the c++_shared in APK.
     We can automatically do this for any recipe if we set this property to
     `True`'''
