@@ -503,7 +503,7 @@ class Recipe(metaclass=RecipeMeta):
             if with_flags_in_cc:
                 env['CXX'] += ' -frtti -fexceptions'
 
-            #env['LDFLAGS'] += ' -L{}'.format(arch.ndk_lib_dir)
+            env['LDFLAGS'] += ' -L{}'.format(arch.ndk_lib_dir)
             env['LIBS'] = env.get('LIBS', '') + " -l{}".format(
                 self.stl_lib_name
             )
